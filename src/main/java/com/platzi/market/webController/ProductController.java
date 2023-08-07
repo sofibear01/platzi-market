@@ -1,4 +1,4 @@
-package com.platzi.market.web.controller;
+package com.platzi.market.webController;
 
 import com.platzi.market.domain.Product;
 import com.platzi.market.domain.service.ProductService;
@@ -23,15 +23,15 @@ public class ProductController {
         return productService.getProduct(productId);
     }
 
-    public Optional<List<Product>> getByCategory(int categoryId){
+    public Optional<List<Product>> getByCategory (int categoryId) {
         return productService.getByCategory(categoryId);
     }
 
-    public Product save(Product product) {
+    public Product save(Product product){
         return productService.save(product);
     }
 
     public boolean delete(int productId){
-       return productService.delete(productId);
+        return productService.delete(productId);
     }
 }

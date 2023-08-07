@@ -2,7 +2,8 @@ package com.platzi.market.persistence;
 
 import com.platzi.market.persistence.crud.ProductoCrudRepository;
 import com.platzi.market.persistence.entity.Producto;
-import org.springframework.beans.factory.ObjectProvider;
+import com.platzi.market.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,7 +11,10 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository {
+    //@Autowired  //agregue esto
     private ProductoCrudRepository productoCrudRepository;
+    //@Autowired  // y esto tambien agregue jutno con la linea de abajo
+    //private ProductMapper mapper; //esta agregada
     public List<Producto> getAll(){
         return (List<Producto>) productoCrudRepository.findAll();
     }
